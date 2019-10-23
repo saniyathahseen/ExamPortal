@@ -13,3 +13,9 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "json_demo.txt", true);
 xmlhttp.send();
+//looping
+var myObj, x;
+myObj = { "name":"John", "age":30, "car":null };
+for (x in myObj) {
+  document.getElementById("demo").innerHTML += myObj[x];
+}
