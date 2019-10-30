@@ -1,4 +1,4 @@
-var Questions = { "question" : [
+var questions = { "question" : [
     {
       "question"  : "What is the average of first five multiples of 12?",
        "choice1"  : "36",
@@ -28,9 +28,7 @@ var Questions = { "question" : [
     },
     
     {
-      "question"  : " Sohan started a business with a capital of Rs. 80000.
-                      After 6 months Mohan joined as a partner by investing Rs. 65000.
-                      After one year they earned total profit Rs. 20000. What is share of Sohan in the profit?",
+      "question"  : " Sohan started a business with a capital of Rs. 80000.After 6 months Mohan joined as a partner by investing Rs. 65000.After one year they earned total profit Rs. 20000. What is share of Sohan in the profit?",
        "choice1"  : "Rs. 5222.2",
        "choice2"  : "Rs. 5777.7",
        "choice3"  : "Rs. 6222.2",
@@ -39,8 +37,7 @@ var Questions = { "question" : [
     },
     
     {
-      "question"  : " A mother is twice as old as her son. 
-                   If 20 years ago, the age of the mother was 10 times the age of the son, what is the present age of the mother?",
+      "question"  : " A mother is twice as old as her son. If 20 years ago, the age of the mother was 10 times the age of the son, what is the present age of the mother?",
        "choice1"  : "38 years",
        "choice2"  : "40 years",
        "choice3"  : "43 yearss",
@@ -56,8 +53,7 @@ var Questions = { "question" : [
        "correct"  : 2
     },
     {
-      "question"  : "The speed of a boat in still water is 5km/hr.
-       If the speed of the boat against the stream is 3 km/hr, what is the speed of the stream?",
+      "question"  : "The speed of a boat in still water is 5km/hr.If the speed of the boat against the stream is 3 km/hr, what is the speed of the stream?",
        "choice1"  : "1.5 km/hr",
        "choice2"  : "2 km/hr",
        "choice3"  : "2.5 km/hr",

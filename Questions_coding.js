@@ -1,62 +1,30 @@
 var Questions = { "question" : [
     {
-      "question"  : "What will be the output of the program?
-
-      #include<stdio.h>
-      
-      int main()
-      {
-          typedef float f;
-          static f *fptr;
-          float fval = 90;
-          fptr = &fval;
-          printf("%f\n", *fptr);
-          return 0;
-      }",
-       "choice1"  : "9",
-       "choice2"  : "0",
-       "choice3"  : "90.000000",
-       "choice4"  : "90",                   
+      "question"  : "What will happen if in a C program you assign a value to an array element whose subscript exceeds the size of array?",
+       "choice1"  : "The element will be set to 0",
+       "choice2"  : "The compiler would report an error.",
+       "choice3"  : "The program may crash if some important data gets overwritten.",
+       "choice4"  : "The array size would appropriately grow.",                   
        "correct"  : 3
     },
     
     {
-      "question"  : "What will be the output of the program, if a short int is 2 bytes wide?
-
-      #include<stdio.h>
-      int main()
-      {
-          short int i = 0;
-          for(i<=5 && i>=-1; ++i; i>0)
-              printf("%u", i);
-          return 0;
-      }",
-       "choice1"  : "1 ... 65535",
-       "choice2"  : "Expression syntax error",
-       "choice3"  : "No output",
-       "choice4"  : "0, 1, 2, 3, 4, 5",
+      "question"  : "Which class does not override the equals() and hashCode() methods, inheriting them directly from class Object?",
+       "choice1"  : "java.lang.String",
+       "choice2"  : "java.lang.Double",
+       "choice3"  : "java.lang.StringBuffer",
+       "choice4"  : "java.lang.Character",
                         
-       "correct"  : 2
+       "correct"  : 3
     },
     
     {
-      "question"  : "What will be the output of the program?
-
-      #include<stdio.h>
-      int main()
-      {
-          float a = 0.7;
-          if(0.7 > a)
-              printf("Hi\n");
-          else
-              printf("Hello\n");
-          return 0;
-      }",
-       "choice1"  : "Hi",
-       "choice2"  : "Hello",
-       "choice3"  : "Hi Hello",
-       "choice4"  : "None of above",                    
-       "correct"  : 1
+      "question"  : "Which collection class allows you to grow or shrink its size and provides indexed access to its elements, but whose methods are not synchronized?",
+       "choice1"  : "java.util.HashSet",
+       "choice2"  : "java.util.LinkedHashSet",
+       "choice3"  : "java.util.List",
+       "choice4"  : "java.util.ArrayList",                    
+       "correct"  : 4
     },
     
     {
