@@ -124,13 +124,13 @@ h2{
        <center>
        <div class="column2">
            <h2>Login</h2>
-            <form action="/action_page.php">
+            <form action="log.php"method="post">
               <div class="row">
                 <div class="col-25">
                   <label for="fname">Name</label></br>
                 </div>
                 <div class="col-75">
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <input type="text" id="username" name="username" placeholder="Your name..">
                 </div>
               </div>
               <div class="row">
@@ -138,12 +138,12 @@ h2{
                   <label for="fname">Password</label></br>
                 </div>
                 <div class="col-75">
-                  <input type="password" id="Password" name="password" placeholder="password">
+                  <input type="password" id="password" name="password" placeholder="password">
                 </div>
               </div>
             </br>
                 <input type="submit" value="Submit" style="width: 200px;"></form></br>
-                <a href="reg_web.html">Registration--></a></br>
+                <a href="registration.php">Registration--></a></br>
               </div>
             </center> 
             </form>

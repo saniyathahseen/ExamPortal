@@ -104,7 +104,7 @@
       <div class="column1"></div>
       <div class="column2">
         <h2>Registration</h2>
-        <form action="action.php"method="post">
+        <form action="reg.php"method="post">
           <div class="row">
             <div class="col-25">
               <label for="fname">Name</label>
