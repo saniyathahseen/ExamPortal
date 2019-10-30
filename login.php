@@ -3,15 +3,41 @@
         <title>
             Exam Portal
         </title>
-        <link rel="stylesheet" href="exam1.css">
-<link rel="stylesheet" href="exam2.css">
-<link rel="stylesheet" href="exam3.css">
-
+        
         <style>
     
     * {
   box-sizing: border-box;
 }
+body {
+    background-color: white;
+  }
+  
+  p {
+  
+    color:violet;
+
+  }  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #111;
+  }
 
 /* Create two equal columns that floats next to each other */
 .column1 {
@@ -62,9 +88,11 @@ input[type=submit] {
   float: right;
 }
 
+
 input[type=submit]:hover {
-  background-color::lightgrey;
-}
+        background-color: #030303;
+      }
+
 
 .container {
   border-radius: 5px;
@@ -106,18 +134,13 @@ h2{
 </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="w3-top">
-      <div class="w3-bar w3-black w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEST</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-        
-        </div>
-        <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-      </div>
+<ul>
+<li><a class="active" href="home.php">Home</a></li>
+  <li><a  href="login.php">Tests</a></li>
+  <li><a href="contact.html">contact</a></li>
+  <li><a href="registration.php">New user</a></li>
+  
+    </ul>
     </div>
 <div class="row">
        <div class="column1">  </div>
