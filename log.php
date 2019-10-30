@@ -13,7 +13,7 @@ else
        if ($result)
         {
         
-        include("question.html");
+        include("question.php");
 
         } 
         else 
