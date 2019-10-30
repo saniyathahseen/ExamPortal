@@ -12,10 +12,10 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <ul>
-  <li><a class="active" href="file:///C:/Users/Admin/Downloads/car.html">Home</a></li>
-  <li><a  href="file:///C:/Users/Admin/Downloads/model.html">Tests</a></li>
-  <li><a href="file:///C:/Users/Saritha%20H/Downloads/contactnet.html">contact</a></li>
-  <li><a href="login.php">New user/Login</a></li>
+  <li><a class="active" href="home.php">Home</a></li>
+  <li><a  href="login.php">Tests</a></li>
+  <li><a href="contact.html">contact</a></li>
+  <li><a href="registration.php">New user</a></li>
   
 
   </ul>
