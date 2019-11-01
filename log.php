@@ -13,7 +13,7 @@ else
        if ($result)
         {
         
-        header("location:question.html");
+        header("location:CustHome.php");
 
         } 
         else 

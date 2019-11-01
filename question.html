@@ -163,115 +163,124 @@
         <h2 id="question">What is the answer to this questions?</h2>
         <div class="choice-container">
           <p class="choice-prefix">A</p>
-          <p class="choice-text" data-number="1">Choice 1</p>
+          <p id="a"class="choice-text" data-number="1">Choice 1</p>
         </div>
         <div class="choice-container">
           <p class="choice-prefix">B</p>
-          <p class="choice-text" data-number="2">Choice 2</p>
+          <p id="b"class="choice-text" data-number="2">Choice 2</p>
         </div>
         <div class="choice-container">
           <p class="choice-prefix">C</p>
-          <p class="choice-text" data-number="3">Choice 3</p>
+          <p id="c"class="choice-text" data-number="3">Choice 3</p>
         </div>
         <div class="choice-container">
           <p class="choice-prefix">D</p>
-          <p class="choice-text" data-number="4">Choice 4</p>
+          <p id="d"class="choice-text" data-number="4">Choice 4</p>
         </div>
         <button onclick="click()">Next</button>
       </div>
     </div>
-    <script src="question.js">
-       function click(){
-        const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
-const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById("score");
-const progressBarFull = document.getElementById("progressBarFull");
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuesions = [];
-
-let questions = [];
-
-fetch("questions.json")
-  .then(res => {
-    return res.json();
-  })
-  .then(loadedQuestions => {
-    console.log(loadedQuestions);
-    questions = loadedQuestions;
-    startGame();
-  })
-  .catch(err => {
-    console.error(err);
-  });
-
-//CONSTANTS
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
-
-startGame = () => {
-  questionCounter = 0;
-  score = 0;
-  availableQuesions = [...questions];
-  getNewQuestion();
-};
-
-getNewQuestion = () => {
-  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    localStorage.setItem("mostRecentScore", score);
-    //go to the end page
-    return window.location.assign("/end.html");
-  }
-  questionCounter++;
-  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
-  //Update the progress bar
-  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-
-  const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-  currentQuestion = availableQuesions[questionIndex];
-  question.innerText = currentQuestion.question;
-
-  choices.forEach(choice => {
-    const number = choice.dataset["number"];
-    choice.innerText = currentQuestion["choice" + number];
-  });
-
-  availableQuesions.splice(questionIndex, 1);
-  acceptingAnswers = true;
-};
-
-choices.forEach(choice => {
-  choice.addEventListener("click", e => {
-    if (!acceptingAnswers) return;
-
-    acceptingAnswers = false;
-    const selectedChoice = e.target;
-    const selectedAnswer = selectedChoice.dataset["number"];
-
-    const classToApply =
-      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-
-    if (classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
+    <script>
+      var arr = [
+    {
+      "question"  : "What is the name of Draco Malfoy's son?",
+       "choice1"  : "Scorpius",
+       "choice2"  : "Lucius",
+       "choice3"  : "Diego",
+       "choice4"  : "Severus",
+       "choice5"  : "Dane",                    
+       "correct"  : 1
+    },
+    
+    {
+      "question"  : "What creature does Dumbledore have as a pet?",
+       "choice1"  : "Efreet",
+       "choice2"  : "Fey",
+       "choice3"  : "Troll",
+       "choice4"  : "Phoenix",
+       "choice5"  : "Basilisk",                    
+       "correct"  : 4
+    },
+    
+    {
+      "question"  : "What is Voldemort's final horcrux?",
+       "choice1"  : "A mirror",
+       "choice2"  : "A snake",
+       "choice3"  : "A brooch",
+       "choice4"  : "Harry Potter",
+       "choice5"  : "A violin",                    
+       "correct"  : 2
+    },
+    
+    {
+      "question"  : "Who takes over as headmaster of Hogwarts after Dumbledore's death?",
+       "choice1"  : "Voldemort",
+       "choice2"  : "Narcissa Black",
+       "choice3"  : "Professor Trelawny",
+       "choice4"  : "Delores Umbridge",
+       "choice5"  : "Professor Snape",                    
+       "correct"  : 5
+    },
+    
+    {
+      "question"  : "Who killed Deatheater Antonin Dolohov during the Battle of Hogwarts?",
+       "choice1"  : "Professor Flitwick",
+       "choice2"  : "Ron Weasley",
+       "choice3"  : "Falling Debris",
+       "choice4"  : "Hermione Granger",
+       "choice5"  : "A Troll",                    
+       "correct"  : 1
     }
-
-    selectedChoice.parentElement.classList.add(classToApply);
-
-    setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply);
-      getNewQuestion();
-    }, 1000);
-  });
-});
-
-incrementScore = num => {
-  score += num;
-  scoreText.innerText = score;
-};
-       } 
-     </script>
+  ];
+var myJSON = JSON.stringify(arr);
+document.getElementById("question").innerHTML = myJSON[0];
+      // var x=0;
+      // function click(){
+      //   xmlhttp.onreadystatechange = function() {
+      //     if (this.readyState == 4 && this.status == 200) {
+      //       var myArr = JSON.parse(this.responseText);
+      //       document.getElementById("question").innerHTML = myArr[x].question;
+      //       document.getElementById("a").innerHTML = myArr[x].a;
+      //       document.getElementById("b").innerHTML = myArr[x].b;
+      //       document.getElementById("c").innerHTML = myArr[x].c;
+      //       document.getElementById("d").innerHTML = myArr[x].d;
+      //       x=x+1;
+      //     }
+      //   };
+      //   xmlhttp.open("GET", "coding.Quest_json_file.json", true);
+      //   xmlhttp.send();
+      // }
+//        function change_myselect(sel) {
+//         var obj, dbParam, xmlhttp, myObj, x, txt = "";
+//         obj = { table: sel, limit: 1 };
+//         dbParam = JSON.stringify(obj);
+//         xmlhttp = new XMLHttpRequest();
+//         xmlhttp.onreadystatechange = function() {
+//           if (this.readyState == 4 && this.status == 200) {
+//             myObj = JSON.parse(this.responseText);
+//             if (x in myObj) {
+//               document.getElementById("question").innerHTML = myObj[x].name;
+//               document.getElementById("a").innerHTML = myObj[x].name;
+//               document.getElementById("b").innerHTML = myObj[x].name;
+//               document.getElementById("c").innerHTML = myObj[x].name;
+//               document.getElementById("d").innerHTML = myObj[x].name;
+//             }            
+//           }
+//         };
+//         xmlhttp.open("POST", "json_demo_db_post.php", true);
+//         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//         xmlhttp.send("x=" + dbParam);
+//       }
+//       var xmlhttp = new XMLHttpRequest();
+// xmlhttp.onreadystatechange = function() {
+//   if (this.readyState == 4 && this.status == 200) {
+//     var myObj = JSON.parse(this.responseText);
+//     document.getElementById("demo").innerHTML = myObj.name;
+//   }
+// };
+// xmlhttp.open("GET", "json_demo.txt", true);
+// xmlhttp.send();
+//       //onchange="change_myselect(this.value)"
+    </script>
   </body>
 </html>
