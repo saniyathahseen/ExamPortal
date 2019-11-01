@@ -181,7 +181,7 @@
       </div>
     </div>
     <script>
-      var arr = [
+      var arr={"question": [
     {
       "question"  : "What is the name of Draco Malfoy's son?",
        "choice1"  : "Scorpius",
@@ -231,56 +231,14 @@
        "choice5"  : "A Troll",                    
        "correct"  : 1
     }
-  ];
-var myJSON = JSON.stringify(arr);
-document.getElementById("question").innerHTML = myJSON[0];
-      // var x=0;
-      // function click(){
-      //   xmlhttp.onreadystatechange = function() {
-      //     if (this.readyState == 4 && this.status == 200) {
-      //       var myArr = JSON.parse(this.responseText);
-      //       document.getElementById("question").innerHTML = myArr[x].question;
-      //       document.getElementById("a").innerHTML = myArr[x].a;
-      //       document.getElementById("b").innerHTML = myArr[x].b;
-      //       document.getElementById("c").innerHTML = myArr[x].c;
-      //       document.getElementById("d").innerHTML = myArr[x].d;
-      //       x=x+1;
-      //     }
-      //   };
-      //   xmlhttp.open("GET", "coding.Quest_json_file.json", true);
-      //   xmlhttp.send();
-      // }
-//        function change_myselect(sel) {
-//         var obj, dbParam, xmlhttp, myObj, x, txt = "";
-//         obj = { table: sel, limit: 1 };
-//         dbParam = JSON.stringify(obj);
-//         xmlhttp = new XMLHttpRequest();
-//         xmlhttp.onreadystatechange = function() {
-//           if (this.readyState == 4 && this.status == 200) {
-//             myObj = JSON.parse(this.responseText);
-//             if (x in myObj) {
-//               document.getElementById("question").innerHTML = myObj[x].name;
-//               document.getElementById("a").innerHTML = myObj[x].name;
-//               document.getElementById("b").innerHTML = myObj[x].name;
-//               document.getElementById("c").innerHTML = myObj[x].name;
-//               document.getElementById("d").innerHTML = myObj[x].name;
-//             }            
-//           }
-//         };
-//         xmlhttp.open("POST", "json_demo_db_post.php", true);
-//         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//         xmlhttp.send("x=" + dbParam);
-//       }
-//       var xmlhttp = new XMLHttpRequest();
-// xmlhttp.onreadystatechange = function() {
-//   if (this.readyState == 4 && this.status == 200) {
-//     var myObj = JSON.parse(this.responseText);
-//     document.getElementById("demo").innerHTML = myObj.name;
-//   }
-// };
-// xmlhttp.open("GET", "json_demo.txt", true);
-// xmlhttp.send();
-//       //onchange="change_myselect(this.value)"
+  ]};
+
+        document.getElementById("question").innerHTML = arr.question[0].question;
+document.getElementById("a").innerHTML = arr.question[0].choice1;
+              document.getElementById("b").innerHTML = arr.question[0].choice2;
+              document.getElementById("c").innerHTML = arr.question[0].choice3;
+              document.getElementById("d").innerHTML = arr.question[0].choice4;
+      
     </script>
   </body>
 </html>
