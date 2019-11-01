@@ -133,6 +133,9 @@
       font-size: 60px;
     }
     </style>
+    <script>
+      var x=0;
+    </script>
   </head>
   <body>
       <ul>
@@ -232,13 +235,15 @@
        "correct"  : 1
     }
   ]};
-
-        document.getElementById("question").innerHTML = arr.question[0].question;
-document.getElementById("a").innerHTML = arr.question[0].choice1;
-              document.getElementById("b").innerHTML = arr.question[0].choice2;
-              document.getElementById("c").innerHTML = arr.question[0].choice3;
-              document.getElementById("d").innerHTML = arr.question[0].choice4;
-      
+  
+function click(){
+        document.getElementById("question").innerHTML = arr.question[x].question;
+    document.getElementById("a").innerHTML = arr.question[x].choice1;
+              document.getElementById("b").innerHTML = arr.question[x].choice2;
+              document.getElementById("c").innerHTML = arr.question[x].choice3;
+              document.getElementById("d").innerHTML = arr.question[x].choice4;
+              x=x+1;
+}
     </script>
   </body>
 </html>
