@@ -123,7 +123,8 @@
         <center>
             <div class="centered">
                 <input type="submit" value="Reasoning" style="width: 200px;"><br><br>
-                <input type="submit" value="Coding" style="width: 200px;"><br><br>
+                <form action="question1.php">
+                <input type="submit" value="Coding" style="width: 200px;"><br><br></form>
                 <input type="submit" value="Verbal" style="width: 200px;">
             </div>
         </center>

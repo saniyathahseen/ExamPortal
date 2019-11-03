@@ -65,7 +65,7 @@
       box-sizing: border-box;
     }
     
-    input, select, textarea {
+     select, textarea {
       width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
@@ -100,7 +100,7 @@
       background-color: #f2f2f2;
       padding: 20px;
     }
-    
+   
     .col-25 {
       float: left;
       width: 25%;
@@ -134,7 +134,9 @@
     }
     </style>
     <script>
+      var score=0;
       var x=0;
+      var count=0;
     </script>
   </head>
   <body>
@@ -164,23 +166,26 @@
           </div>
         </div>
         <h2 id="question">What is the answer to this questions?</h2>
-        <div class="choice-container">
-          <p class="choice-prefix">A</p>
-          <p id="a"class="choice-text" data-number="1">Choice 1</p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">B</p>
-          <p id="b"class="choice-text" data-number="2">Choice 2</p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">C</p>
-          <p id="c"class="choice-text" data-number="3">Choice 3</p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">D</p>
-          <p id="d"class="choice-text" data-number="4">Choice 4</p>
-        </div>
-        <button onclick="coding()">Next</button>
+        
+          <div>
+            <input id="a" name="Radio"value="1"type="radio" />
+            <label for="a" id="a1">choice</label><br />
+          </div>
+          <div>
+            <input id="a" name="Radio"value="2" type="radio" />
+            <label for="a" id="b1">choice</label><br />
+          </div>
+          <div>
+            <input id="a" name="Radio"value="3" type="radio" />
+            <label for="a" id="c1">choice</label><br />
+          </div>
+          <div>
+            <input id="a" name="Radio"value="4" type="radio" />
+            <label for="a" id="d1">choice</label><br />
+          </div>        
+          <input type="button" id="btn"onclick="coding()"value="Next"name="Next">
+          <input type="button" id="btn1"onclick="completes()"value="complete"name="complete">
+        
       </div>
     </div>
     <script>
@@ -235,19 +240,37 @@
        "correct"  : 1
     }
   ]};
+  count=1;
+  var answer=document.getElementById("a").value;
   document.getElementById("question").innerHTML = arr.question[x].question;
-  document.getElementById("a").innerHTML = arr.question[x].choice1;
-  document.getElementById("b").innerHTML = arr.question[x].choice2;
-  document.getElementById("c").innerHTML = arr.question[x].choice3;
-  document.getElementById("d").innerHTML = arr.question[x].choice4;
+  document.getElementById("a1").innerHTML = arr.question[x].choice1;
+  document.getElementById("b1").innerHTML = arr.question[x].choice2;
+  document.getElementById("c1").innerHTML = arr.question[x].choice3;
+  document.getElementById("d1").innerHTML = arr.question[x].choice4;
+  if(answer==arr.question[x].correct)
+    {score=score+1;}
+      
   function coding(){
-    x=x+1;
-    document.getElementById("question").innerHTML = arr.question[x].question;
-    document.getElementById("a").innerHTML = arr.question[x].choice1;
-    document.getElementById("b").innerHTML = arr.question[x].choice2;
-    document.getElementById("c").innerHTML = arr.question[x].choice3;
-    document.getElementById("d").innerHTML = arr.question[x].choice4;
+    count=count+1;
+    if(count!=5){
+        document.getElementById("score").innerHTML=score;
+        document.getElementById("question").innerHTML = arr.question[x].question;
+        document.getElementById("a1").innerHTML = arr.question[x].choice1;
+        document.getElementById("b1").innerHTML = arr.question[x].choice2;
+        document.getElementById("c1").innerHTML = arr.question[x].choice3;
+        document.getElementById("d1").innerHTML = arr.question[x].choice4;
+        x=x+1;
+        if(answer==arr.question[x].correct)
+            {score=score+1;}
+    }
+    else
+    {
+        document.getElementById("btn").style.display="none";       
+    }
   }
+  function completes(){
+            window.location.href="CustHome.php";
+    }
     </script>
   </body>
 </html>
