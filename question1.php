@@ -170,16 +170,10 @@
           <div>
             <input id="a" name="Radio"value="1"type="radio" />
             <label for="a" id="a1">choice</label><br />
-          </div>
-          <div>
-            <input id="a" name="Radio"value="2" type="radio" />
+            <input id="a" name="Radio" value="2" type="radio" />
             <label for="a" id="b1">choice</label><br />
-          </div>
-          <div>
             <input id="a" name="Radio"value="3" type="radio" />
             <label for="a" id="c1">choice</label><br />
-          </div>
-          <div>
             <input id="a" name="Radio"value="4" type="radio" />
             <label for="a" id="d1">choice</label><br />
           </div>        
@@ -241,27 +235,38 @@
     }
   ]};
   count=1;
-  var answer=document.getElementById("a").value;
   document.getElementById("question").innerHTML = arr.question[x].question;
   document.getElementById("a1").innerHTML = arr.question[x].choice1;
   document.getElementById("b1").innerHTML = arr.question[x].choice2;
   document.getElementById("c1").innerHTML = arr.question[x].choice3;
   document.getElementById("d1").innerHTML = arr.question[x].choice4;
-  if(answer==arr.question[x].correct)
-    {score=score+1;}
+  
+  function calculate(){
+    var answer=document.getElementById("a").value;
+    if(answer==arr.question[x].correct){
+        score=score+1;
+        }
+  }
+  
       
   function coding(){
+      calculate();
+    document.getElementById("a").checked=false;
+    document.getElementById("b").checked=false;
+    document.getElementById("c").checked=false;
+    document.getElementById("d").checked=false;
+
     count=count+1;
-    if(count!=5){
+    x=x+1;
+    if(count!=10){
         document.getElementById("score").innerHTML=score;
         document.getElementById("question").innerHTML = arr.question[x].question;
+
+        
         document.getElementById("a1").innerHTML = arr.question[x].choice1;
         document.getElementById("b1").innerHTML = arr.question[x].choice2;
         document.getElementById("c1").innerHTML = arr.question[x].choice3;
         document.getElementById("d1").innerHTML = arr.question[x].choice4;
-        x=x+1;
-        if(answer==arr.question[x].correct)
-            {score=score+1;}
     }
     else
     {
@@ -269,6 +274,7 @@
     }
   }
   function completes(){
+            window.confirm("score="+score+" out of 10");
             window.location.href="CustHome.php";
     }
     </script>
