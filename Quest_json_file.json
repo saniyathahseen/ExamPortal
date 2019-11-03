@@ -1,4 +1,4 @@
-var Questions = { "question" : [
+[
     {
       "question"  : "What is the name of Draco Malfoy's son?",
        "choice1"  : "Scorpius",
@@ -48,4 +48,4 @@ var Questions = { "question" : [
        "choice5"  : "A Troll",                    
        "correct"  : 1
     }
-  ]};
+  ]
