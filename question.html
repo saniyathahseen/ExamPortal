@@ -180,7 +180,7 @@
           <p class="choice-prefix">D</p>
           <p id="d"class="choice-text" data-number="4">Choice 4</p>
         </div>
-        <button onclick="click()">Next</button>
+        <button onclick="coding()">Next</button>
       </div>
     </div>
     <script>
@@ -235,15 +235,19 @@
        "correct"  : 1
     }
   ]};
-  
-function click(){
-        document.getElementById("question").innerHTML = arr.question[x].question;
+  document.getElementById("question").innerHTML = arr.question[x].question;
+  document.getElementById("a").innerHTML = arr.question[x].choice1;
+  document.getElementById("b").innerHTML = arr.question[x].choice2;
+  document.getElementById("c").innerHTML = arr.question[x].choice3;
+  document.getElementById("d").innerHTML = arr.question[x].choice4;
+  function coding(){
+    x=x+1;
+    document.getElementById("question").innerHTML = arr.question[x].question;
     document.getElementById("a").innerHTML = arr.question[x].choice1;
-              document.getElementById("b").innerHTML = arr.question[x].choice2;
-              document.getElementById("c").innerHTML = arr.question[x].choice3;
-              document.getElementById("d").innerHTML = arr.question[x].choice4;
-              x=x+1;
-}
+    document.getElementById("b").innerHTML = arr.question[x].choice2;
+    document.getElementById("c").innerHTML = arr.question[x].choice3;
+    document.getElementById("d").innerHTML = arr.question[x].choice4;
+  }
     </script>
   </body>
 </html>
