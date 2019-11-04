@@ -28,12 +28,14 @@
       }
       li {
         float: left;
-      }
-      li a {
         display: block;
         color: white;
         text-align: center;
         padding: 30px 30px;
+        text-decoration: none;
+      }
+      li a {
+        color: white;
         text-decoration: none;
       }
       li a:hover {
@@ -141,7 +143,7 @@
   </head>
   <body>
       <ul>
-          <li><a>usernmae</a></li>
+          <li><?php echo ($_POST['username'])?></li>
           <li><a  href="logout.php">Logout</a></li>
           <li><a href="contact.html">contact</a></li>
           </ul>

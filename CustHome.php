@@ -24,6 +24,13 @@
                 float: left;
             }
             li a{
+               
+                color: white;
+                text-align: center;
+                
+                text-decoration: none;
+            }
+            li {
                 display: block;
                 color: white;
                 text-align: center;
@@ -115,16 +122,17 @@
     </head>
     <body>
         <ul>
-            <li><a class="active" href="home.php">Home</a></li>
-            <li><a  href="login.php">Tests</a></li>
+            <li><?php echo $_GET['username'] ?></li>
+            <li><a  href="logout.php">Logout</a></li>
             <li><a href="contact us.html">contact</a></li>
-            <li><a href="registration.php">New user</a></li>
         </ul>
         <center>
             <div class="centered">
                 <input type="submit" value="Reasoning" style="width: 200px;"><br><br>
-                <form action="question1.php">
-                <input type="submit" value="Coding" style="width: 200px;"><br><br></form>
+                <form action="question1.php" method="post">
+                    <input type="hidden" name="username" value=<?php echo $_GET['username'] ?>/>
+                    <input type="submit" value="Coding" style="width: 200px;"><br><br>
+                </form>
                 <input type="submit" value="Verbal" style="width: 200px;">
             </div>
         </center>

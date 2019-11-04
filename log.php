@@ -5,7 +5,9 @@ if(!$link)
     die ("couldn't connect". mysqli_connect_error());
 }
 else
-{       $username=trim($_POST["username"]);
+{   
+    session_start();    
+    $username=trim($_POST["username"]);
         $password=trim($_POST["password"]);
        
        $sql = "SELECT username FROM login WHERE username = '$username' and password = '$password';";
@@ -13,7 +15,7 @@ else
        if ($result)
         {
         
-        header("location:CustHome.php");
+        header("location:CustHome.php?username=".$username);
 
         } 
         else 
