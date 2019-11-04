@@ -18,26 +18,7 @@ body {
     color:violet;
 
   }  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  li {
-    float: left;
-  }
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 30px 30px;
-    text-decoration: none;
-  }
-  li a:hover {
-    background-color: #111;
-  }
+  
 
 /* Create two equal columns that floats next to each other */
 .column1 {
@@ -134,13 +115,7 @@ h2{
 </style>
 </head>
 <body>
-<ul>
-<li><a class="active" href="home.php">Home</a></li>
-  <li><a  href="login.php">Tests</a></li>
-  <li><a href="contact.html">contact</a></li>
-  <li><a href="registration.php">New user</a></li>
-  
-    </ul>
+
     </div>
 <div class="row">
        <div class="column1">  </div>
