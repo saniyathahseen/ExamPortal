@@ -6,7 +6,7 @@
    }
    session_start();
    
-   $user_check = $_SESSION['username'];
+   $user_check = $_SESSION['login_user'];
    
    $ses_sql = mysqli_query($link,"select username from login where username = '$user_check' ");
    
@@ -14,7 +14,7 @@
    
    $login_session = $row['username'];
    
-   if(!isset($_SESSION[$login_session])){
+   if(empty($login_session)){
       header("location:login.php");
       die();
    }
