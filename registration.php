@@ -107,7 +107,7 @@
         <form action="reg.php"method="post">
           <div class="row">
             <div class="col-25">
-              <label for="fname">Name</label>
+              <label for="username">Name</label>
             </div>
             <div class="col-75">
               <input type="text" id="username" name="username" placeholder="Your name..">
@@ -115,7 +115,7 @@
           </div>
           <div class="row">
             <div class="col-25">
-              <label for="fname">Password</label>
+              <label for="password">Password</label>
             </div>
             <div class="col-75">
               <input type="password" id="password" name="password" placeholder="password">
@@ -123,10 +123,18 @@
           </div>
           <div class="row">
             <div class="col-25">
-              <label for="fname">Confirm Password</label>
+              <label for="password">Confirm Password</label>
             </div>
             <div class="col-75">
               <input type="password" id="conpassword" name="conpassword" placeholder="confirmpassword">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="phone">Phone:</label>
+            </div>
+            <div class="col-75">
+              <input type="number" id="phone" name="phone" placeholder="phone">
             </div>
           </div>
           <input type="submit" value="Submit" style="width: 200px;">

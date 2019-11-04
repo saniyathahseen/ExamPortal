@@ -1,73 +1,71 @@
 var Questions = { "question" : [
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",                   
-       "correct"  : 
+      "question"  : "What was the day on 15th august 1947 ?",
+       "choice1"  : "Friday",
+       "choice2"  : "Saturday",
+       "choice3"  : "Sunday",
+       "choice4"  : "Thursday",                   
+       "correct"  :1 
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "LKI",
-       "choice3"  : "LKJ",
-       "choice4"  : "BAC",
-       "correct"  : 
+      "question"  : "In an election between two candidates, one got 55% of the total valid votes, 20% of the votes were invalid. If the total number of votes was 7500, the number of valid votes that the other candidate got, was :",
+       "choice1"  : "2500	",
+       "choice2"  : "2700",
+       "choice3"  : "2900",
+       "choice4"  : "3100",
+       "correct"  : 2
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "g",
-       "choice4"  : "",                    
-       "correct"  : 
+      "question"  : "A bag contains 50 P, 25 P and 10 P coins in the ratio 5: 9: 4, amounting to Rs. 206. Find the number of coins of each type respectively.",
+       "choice1"  : " 360, 160, 200",
+       "choice2"  : "160, 360, 200",
+       "choice3"  : " 200, 360,160	",
+       "choice4"  : "200,160,300",                    
+       "correct"  : 3
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",                   
-       "correct"  : 
+      "question"  : "If each side of a square is increased by 25%, find the percentage change in its area?",
+       "choice1"  : "65.25",
+       "choice2"  : "56.25",
+       "choice3"  : "65",
+       "choice4"  : "56",                   
+       "correct"  : 2
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  : 
+      "question"  : "A bag contains 6 white and 4 black balls .2 balls are drawn at random. Find the probability that they are of same colour.",
+       "choice1"  : "1/2",
+       "choice2"  : "7/15",
+       "choice3"  : "8/15	",
+       "choice4"  : "1/9",               
+       "correct"  : 2
     },
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  :
+      "question"  : "A problem is given to three students whose chances of solving it are 1/2, 1/3 and 1/4 respectively. What is the probability that the problem will be solved?",
+       "choice1"  : " 1/4",
+       "choice2"  : " 1/2",
+       "choice3"  : "3/4",
+       "choice4"  : " 7/12",               
+       "correct"  :3
     },
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  : 
+      "question"  : "A and B invest in a business in the ratio 3 : 2. If 5% of the total profit goes to charity and A's share is Rs. 855, the total profit is :",
+       "choice1"  : "500",
+       "choice2"  : " 1000",
+       "choice3"  : "1500",
+       "choice4"  : " 2000",               
+       "correct"  : 3
     },
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  : 
-    },
+      "question"  : "If 20% of a = b, then b% of 20 is the same as :",
+       "choice1"  : " 4% of a",
+       "choice2"  : "6% of a",
+       "choice3"  : " 8% of a",
+       "choice4"  : "10% of a",               
+       "correct"  : 1
+    }
     
-  ],
-  
-  };
+  ]};

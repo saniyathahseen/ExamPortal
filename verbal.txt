@@ -1,73 +1,99 @@
 var Questions = { "question" : [
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",                   
-       "correct"  : 
+      "question"  : "What is the meaning of CORPULENT",
+       "choice1"  : "Lean",
+       "choice2"  : " Gaunt",
+       "choice3"  : "Emaciated",
+       "choice4"  : "Obese",                   
+       "correct"  : 4
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "LKI",
-       "choice3"  : "LKJ",
-       "choice4"  : "BAC",
-       "correct"  : 
+      "question"  : "pick out the most effective word(s) from the given words.Fate smiles ...... those who untiringly grapple with stark realities of life. ",
+       "choice1"  : "with",
+       "choice2"  : "over",
+       "choice3"  : "on",
+       "choice4"  : " round",
+       "correct"  : 3
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "g",
-       "choice4"  : "",                    
-       "correct"  : 
+      "question"  : "The miser gazed ...... at the pile of gold coins in front of him.",
+       "choice1"  : "avidly",
+       "choice2"  : "admiringly",
+       "choice3"  : "thoughtfully",
+       "choice4"  : "earnestly",                    
+       "correct"  : 1
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",                   
-       "correct"  : 
+      "question"  : "Join these parts to make a meaningful sentence.
+      1. I
+
+     2. immediately
+
+     3 . salary
+
+     4. my
+
+    5. want ",
+       "choice1"  : "43152",
+       "choice2"  : "15432",
+       "choice3"  : "25143",
+       "choice4"  : "42351",                   
+       "correct"  : 2
     },
     
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  : 
+      "question"  : "1.do
+2. today
+3. you
+4. must
+5. it",
+       "choice1"  : "34152",
+       "choice2"  : "25413",
+       "choice3"  : "12543",
+       "choice4"  : "51324",               
+       "correct"  : 1
     },
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  :
+      "question"  : "The antonym for ENORMOUS",
+       "choice1"  : " Soft",
+       "choice2"  : "Average",
+       "choice3"  : "Tiny",
+       "choice4"  : "Weak",               
+       "correct"  :3
     },
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  : 
+      "question"  : "The antonym for COMMISSIONED",
+       "choice1"  : "Started",
+       "choice2"  : "Closed",
+       "choice3"  : "Finished",
+       "choice4"  : "Terminated",               
+       "correct"  : 4
     },
     {
-      "question"  : "",
-       "choice1"  : "",
-       "choice2"  : "",
-       "choice3"  : "",
-       "choice4"  : "",               
-       "correct"  : 
+      "question"  : "Find the correctly spelt word.",
+       "choice1"  : "Efficient",
+       "choice2"  : "Treatmeant",
+       "choice3"  : "Beterment",
+       "choice4"  : "Employd",               
+       "correct"  : 1
     },
-    
-  ],
-  
-  };
+     {
+      "question"  : "Find the correctly spelt word.",
+       "choice1"  : "Foreign ",
+       "choice2"  : "Foreine",
+       "choice3"  : "Fariegn",
+       "choice4"  : "Forein",               
+       "correct"  :1
+    },
+    {
+      "question"  : "Find the correctly spelt word.",
+       "choice1"  : "Ommineous",
+       "choice2"  : "Omineous",
+       "choice3"  : "Ominous",
+       "choice4"  : "Omenous",               
+       "correct"  : 3
+    }
+  ]};
