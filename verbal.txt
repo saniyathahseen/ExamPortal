@@ -1,0 +1,73 @@
+var Questions = { "question" : [
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "",
+       "choice4"  : "",                   
+       "correct"  : 
+    },
+    
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "LKI",
+       "choice3"  : "LKJ",
+       "choice4"  : "BAC",
+       "correct"  : 
+    },
+    
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "g",
+       "choice4"  : "",                    
+       "correct"  : 
+    },
+    
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "",
+       "choice4"  : "",                   
+       "correct"  : 
+    },
+    
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "",
+       "choice4"  : "",               
+       "correct"  : 
+    },
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "",
+       "choice4"  : "",               
+       "correct"  :
+    },
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "",
+       "choice4"  : "",               
+       "correct"  : 
+    },
+    {
+      "question"  : "",
+       "choice1"  : "",
+       "choice2"  : "",
+       "choice3"  : "",
+       "choice4"  : "",               
+       "correct"  : 
+    },
+    
+  ],
+  
+  };
