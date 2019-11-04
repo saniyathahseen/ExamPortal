@@ -5,9 +5,9 @@ if(!$link)
     die ("couldn't connect". mysqli_connect_error());
 }
 else
-{   echo "Connected successfully";
-
+{   
     $username=($_POST["username"]);
+    $phone=($_POST["phone"]);
     $password=($_POST["password"]);
     $conpassword=($_POST["conpassword"]);
 
@@ -16,12 +16,12 @@ else
         $username=trim($_POST["username"]);
         $password=trim($_POST["password"]);
        
-        $sql = "SELECT Reg_No FROM student WHERE username = '$username' and password = '$password';";
+        $sql = "SELECT username FROM student WHERE username = '$username' and phone = '$phone';";
         $result = mysqli_query($link, $sql);
-        if ( mysqli_num_rows($result) ==1)
+        if (!($result))
         {
         
-            $sql = "INSERT INTO login (username,password) VALUES ('$username', '$password')";
+            $sql = "INSERT INTO login (username,password,phone) VALUES ('$username', '$password','$phone')";
             if (mysqli_query($link, $sql)) {
     
                 include("thankyou.html");
