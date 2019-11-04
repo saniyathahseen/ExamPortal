@@ -168,13 +168,13 @@
         <h2 id="question">What is the answer to this questions?</h2>
         
           <div>
-            <input id="a" name="Radio"value="1"type="radio" />
+            <input id="a" name="Radio"value="1"type="radio" onclick="calculate(this.value)"/>
             <label for="a" id="a1">choice</label><br />
-            <input id="a" name="Radio" value="2" type="radio" />
+            <input id="b" name="Radio" value="2" type="radio" onclick="calculate(this.value)"/>
             <label for="a" id="b1">choice</label><br />
-            <input id="a" name="Radio"value="3" type="radio" />
+            <input id="c" name="Radio"value="3" type="radio" onclick="calculate(this.value)"/>
             <label for="a" id="c1">choice</label><br />
-            <input id="a" name="Radio"value="4" type="radio" />
+            <input id="d" name="Radio"value="4" type="radio"onclick="calculate(this.value)" />
             <label for="a" id="d1">choice</label><br />
           </div>        
           <input type="button" id="btn"onclick="coding()"value="Next"name="Next">
@@ -184,99 +184,99 @@
     </div>
     <script>
       var arr={"question": [
-    {
-      "question"  : "What is the name of Draco Malfoy's son?",
-       "choice1"  : "Scorpius",
-       "choice2"  : "Lucius",
-       "choice3"  : "Diego",
-       "choice4"  : "Severus",
-       "choice5"  : "Dane",                    
-       "correct"  : 1
-    },
+      {
+        "question"  : "What is the name of Draco Malfoy's son?",
+        "choice1"  : "Scorpius",
+        "choice2"  : "Lucius",
+        "choice3"  : "Diego",
+        "choice4"  : "Severus",
+        "choice5"  : "Dane",                    
+        "correct"  : 1
+      },
     
-    {
-      "question"  : "What creature does Dumbledore have as a pet?",
-       "choice1"  : "Efreet",
-       "choice2"  : "Fey",
-       "choice3"  : "Troll",
-       "choice4"  : "Phoenix",
-       "choice5"  : "Basilisk",                    
-       "correct"  : 4
-    },
+      {
+        "question"  : "What creature does Dumbledore have as a pet?",
+        "choice1"  : "Efreet",
+        "choice2"  : "Fey",
+        "choice3"  : "Troll",
+        "choice4"  : "Phoenix",
+        "choice5"  : "Basilisk",                    
+        "correct"  : 4
+      },
     
-    {
-      "question"  : "What is Voldemort's final horcrux?",
-       "choice1"  : "A mirror",
-       "choice2"  : "A snake",
-       "choice3"  : "A brooch",
-       "choice4"  : "Harry Potter",
-       "choice5"  : "A violin",                    
-       "correct"  : 2
-    },
+      {
+        "question"  : "What is Voldemort's final horcrux?",
+        "choice1"  : "A mirror",
+        "choice2"  : "A snake",
+        "choice3"  : "A brooch",
+        "choice4"  : "Harry Potter",
+        "choice5"  : "A violin",                    
+        "correct"  : 2
+      },
     
-    {
-      "question"  : "Who takes over as headmaster of Hogwarts after Dumbledore's death?",
-       "choice1"  : "Voldemort",
-       "choice2"  : "Narcissa Black",
-       "choice3"  : "Professor Trelawny",
-       "choice4"  : "Delores Umbridge",
-       "choice5"  : "Professor Snape",                    
-       "correct"  : 5
-    },
+      {
+        "question"  : "Who takes over as headmaster of Hogwarts after Dumbledore's death?",
+        "choice1"  : "Voldemort",
+        "choice2"  : "Narcissa Black",
+        "choice3"  : "Professor Trelawny",
+        "choice4"  : "Delores Umbridge",
+        "choice5"  : "Professor Snape",                    
+        "correct"  : 5
+      },
     
-    {
-      "question"  : "Who killed Deatheater Antonin Dolohov during the Battle of Hogwarts?",
-       "choice1"  : "Professor Flitwick",
-       "choice2"  : "Ron Weasley",
-       "choice3"  : "Falling Debris",
-       "choice4"  : "Hermione Granger",
-       "choice5"  : "A Troll",                    
-       "correct"  : 1
-    }
-  ]};
-  count=1;
-  document.getElementById("question").innerHTML = arr.question[x].question;
-  document.getElementById("a1").innerHTML = arr.question[x].choice1;
-  document.getElementById("b1").innerHTML = arr.question[x].choice2;
-  document.getElementById("c1").innerHTML = arr.question[x].choice3;
-  document.getElementById("d1").innerHTML = arr.question[x].choice4;
-  
-  function calculate(){
-    var answer=document.getElementById("a").value;
-    if(answer==arr.question[x].correct){
-        score=score+1;
-        }
-  }
-  
+      {
+        "question"  : "Who killed Deatheater Antonin Dolohov during the Battle of Hogwarts?",
+        "choice1"  : "Professor Flitwick",
+        "choice2"  : "Ron Weasley",
+        "choice3"  : "Falling Debris",
+        "choice4"  : "Hermione Granger",
+        "choice5"  : "A Troll",                    
+        "correct"  : 1
+      }
+      ]};
+      document.getElementById("question").innerHTML = arr.question[x].question;
+      document.getElementById("a1").innerHTML = arr.question[x].choice1;
+      document.getElementById("b1").innerHTML = arr.question[x].choice2;
+      document.getElementById("c1").innerHTML = arr.question[x].choice3;
+      document.getElementById("d1").innerHTML = arr.question[x].choice4;
       
-  function coding(){
-      calculate();
-    document.getElementById("a").checked=false;
-    document.getElementById("b").checked=false;
-    document.getElementById("c").checked=false;
-    document.getElementById("d").checked=false;
+      function calculate(val){
+        var answer=val;
+  
+        if(answer==arr.question[x].correct){
+            score=score+1;
+            }
+      }
+      
+          
+      function coding(){
+        document.getElementById("a").checked=false;
+        document.getElementById("b").checked=false;
+        document.getElementById("c").checked=false;
+        document.getElementById("d").checked=false;
 
-    count=count+1;
-    x=x+1;
-    if(count!=10){
         document.getElementById("score").innerHTML=score;
-        document.getElementById("question").innerHTML = arr.question[x].question;
+        count=count+1;
+        x=x+1;
+        if(count!=10){
+            
+            document.getElementById("question").innerHTML = arr.question[x].question;
 
-        
-        document.getElementById("a1").innerHTML = arr.question[x].choice1;
-        document.getElementById("b1").innerHTML = arr.question[x].choice2;
-        document.getElementById("c1").innerHTML = arr.question[x].choice3;
-        document.getElementById("d1").innerHTML = arr.question[x].choice4;
-    }
-    else
-    {
-        document.getElementById("btn").style.display="none";       
-    }
-  }
-  function completes(){
-            window.confirm("score="+score+" out of 10");
-            window.location.href="CustHome.php";
-    }
+            
+            document.getElementById("a1").innerHTML = arr.question[x].choice1;
+            document.getElementById("b1").innerHTML = arr.question[x].choice2;
+            document.getElementById("c1").innerHTML = arr.question[x].choice3;
+            document.getElementById("d1").innerHTML = arr.question[x].choice4;
+        }
+        else
+        {
+            document.getElementById("btn").style.display="none";       
+        }
+      }
+      function completes(){
+                window.confirm("score="+score+" out of 10");
+                window.location.href="CustHome.php";
+      }
     </script>
   </body>
 </html>
