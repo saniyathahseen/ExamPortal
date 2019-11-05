@@ -122,7 +122,11 @@
                 text-align: center;
              }
         </style>
+        <script>
+        
+        </script>
     </head>
+    
     <body>
         <ul>
             <li><?php echo $_SESSION['login_user'] ?></li>
