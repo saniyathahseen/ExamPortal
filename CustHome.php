@@ -125,18 +125,24 @@
     </head>
     <body>
         <ul>
-            <li><?php echo $_GET['username'] ?></li>
+            <li><?php echo $_SESSION['login_user'] ?></li>
             <li><a  href="logout.php">Logout</a></li>
             <li><a href="contact us.html">contact</a></li>
         </ul>
         <center>
             <div class="centered">
-                <input type="submit" value="Reasoning" style="width: 200px;"><br><br>
-                <form action="question1.php" method="post">
-                    <input type="hidden" name="username" value=<?php echo $_GET['username'] ?>/>
+                <form action="reasoning.php" method="post">
+                    <input type="hidden" name="username" value=<?php echo $_SESSION['login_user'] ?>/>
+                    <input type="submit" value="Reasoning" style="width: 200px;"><br><br>
+                </form>
+                <form action="coding.php" method="post">
+                    <input type="hidden" name="username" value=<?php echo $_SESSION['login_user'] ?>/>
                     <input type="submit" value="Coding" style="width: 200px;"><br><br>
                 </form>
-                <input type="submit" value="Verbal" style="width: 200px;">
+                <form action="verbal.php" method="post">
+                    <input type="hidden" name="username" value=<?php echo $_SESSION['login_user']?>/>
+                    <input type="submit" value="verbal" style="width: 200px;"><br><br>
+                </form>
             </div>
         </center>
         <!-- Footer -->
