@@ -23,8 +23,8 @@ else
         
             $sql = "INSERT INTO login (username,password,phone) VALUES ('$username', '$password','$phone')";
             if (mysqli_query($link, $sql)) {
-    
-                include("thankyou.html");
+                
+                header("Location:thankyou.html");
     
             } 
             else 
