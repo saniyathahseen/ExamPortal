@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2019 at 12:05 PM
+-- Generation Time: Nov 06, 2019 at 12:04 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -23,6 +23,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `name` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` int(10) NOT NULL,
+  `msg` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
@@ -37,7 +50,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`username`, `password`, `phone`) VALUES
-('saniya', '123', '9496356389');
+('saniya', '123', '9496356389'),
+('hadiya', '123', '1234567890');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
