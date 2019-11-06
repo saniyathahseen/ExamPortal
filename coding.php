@@ -161,17 +161,13 @@
               <div id="progressBarFull"></div>
             </div>
           </div>
-          <div id="hud-item">
-            <p class="hud-prefix">
-              Score
-            </p>
-            <h1 class="hud-main-text" id="score">
-              0
-            </h1>
-          </div>
         </div>
-        <p id="question">What is the answer to this questions?</p>
-        
+        <form action="scorecode.php"method="post">
+          <div id="hud-item">
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" name="score"id="score">0</h1>
+          </div>
+          <p id="question">What is the answer to this questions?</p>
           <div>
             <input id="a" name="Radio"value="1"type="radio" onclick="calculate(this.value)"/>
             <label for="a" id="a1">choice</label><br />
@@ -184,7 +180,7 @@
           </div>        
           <input type="button" id="btn"onclick="coding()"value="Next"name="Next">
           <input type="button" id="btn1"onclick="completes()"value="complete"name="complete">
-        
+        </form>
       </div>
     </div>
     <script>
@@ -348,7 +344,7 @@
       }
       function completes(){
                 window.confirm("score="+score+" out of 10");
-                window.location.href="CustHome.php";
+                window.location.href="scorecode.php";
       }
     </script>
   </body>
