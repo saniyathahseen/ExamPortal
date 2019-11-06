@@ -146,7 +146,7 @@
   </head>
   <body>
       <ul>
-          <li><?php echo ($_POST['username'])?></li>
+          <li><?php echo $_SESSION['login_user'] ?></li>
           <li><a  href="logout.php">Logout</a></li>
           <li><a href="contact.html">contact</a></li>
           </ul>
@@ -170,7 +170,7 @@
             </h1>
           </div>
         </div>
-        <h2 id="question">What is the answer to this questions?</h2>
+        <p id="question">What is the answer to this questions?</p>
         
           <div>
             <input id="a" name="Radio"value="1"type="radio" onclick="calculate(this.value)"/>
