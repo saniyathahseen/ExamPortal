@@ -21,10 +21,10 @@ else
         if (!($result))
         {
         
-            $sql = "INSERT INTO login (username,password,phone) VALUES ('$username', '$password','$phone')";
+            $sql = "INSERT INTO login (username,password,phone,code,verbal,reason) VALUES ('$username', '$password','$phone','0','0','0')";
             if (mysqli_query($link, $sql)) {
                 
-                header("Location:thankyou.html");
+                header("Location:login.php");
     
             } 
             else 
