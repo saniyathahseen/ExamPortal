@@ -130,8 +130,9 @@
     <body>
         <ul>
             <li><?php echo $_SESSION['login_user'] ?></li>
-            <li><a  href="logout.php">Logout</a></li>
+            <li><a  href="skill.php">status</a></li>
             <li><a href="contact us.html">contact</a></li>
+            <li><a  href="logout.php">Logout</a></li>
         </ul>
         <center>
             <div class="centered">
