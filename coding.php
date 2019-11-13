@@ -341,10 +341,11 @@
         {
             document.getElementById("btn").style.display="none";       
         }
+        
       }
       function completes(){
                 window.confirm("score="+score+" out of 10");
-                window.location.href="scorecode.php";
+                window.location.href = "scorecode.php?score=" + score;
       }
     </script>
   </body>

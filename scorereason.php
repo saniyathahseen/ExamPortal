@@ -15,7 +15,7 @@ else
     
        
         
-            $sql ="UPDATE login SET code=$code WHERE  username='$username'";
+            $sql ="UPDATE login SET reason=$code WHERE  username='$username'";
             if (mysqli_query($link, $sql)) {
                 
                 header("Location:CustHome.php");

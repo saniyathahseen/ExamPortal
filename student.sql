@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2019 at 12:42 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.21
+-- Generation Time: Nov 13, 2019 at 05:06 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -63,9 +65,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`username`, `password`, `phone`, `code`, `verbal`, `reason`) VALUES
-('saniya', '123', '9496356389', 0, 0, 0),
-('hadiya', '123', '1234567890', 0, 0, 0),
-('', '', '', 0, 0, 0);
+('saniya', '12', '9562494769', 2, 1, 1);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

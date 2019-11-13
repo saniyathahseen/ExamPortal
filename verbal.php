@@ -150,7 +150,7 @@
           <li><a  href="logout.php">Logout</a></li>
           <li><a href="contact.html">contact</a></li>
           </ul>
-    <div class="container">
+          <div class="container">
       <div id="game" class="justify-center flex-column">
         <div id="hud">
           <div id="hud-item">
@@ -161,15 +161,12 @@
               <div id="progressBarFull"></div>
             </div>
           </div>
-          <div id="hud-item">
-            <p class="hud-prefix">
-              Score
-            </p>
-            <h1 class="hud-main-text" id="score">
-              0
-            </h1>
-          </div>
         </div>
+        <form action="scoreverbal.php"method="post">
+          <div id="hud-item">
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" name="score"id="score">0</h1>
+          </div>
         <p id="question">What is the answer to this questions?</p>
         
           <div>
@@ -184,7 +181,7 @@
           </div>        
           <input type="button" id="btn"onclick="coding()"value="Next"name="Next">
           <input type="button" id="btn1"onclick="completes()"value="complete"name="complete">
-        
+          </form>
       </div>
     </div>
     <script>
@@ -316,7 +313,7 @@
       }
       function completes(){
                 window.confirm("score="+score+" out of 10");
-                window.location.href="CustHome.php";
+                window.location.href = "scoreverbal.php?score=" + score;
       }
     </script>
   </body>
