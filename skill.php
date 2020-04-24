@@ -166,7 +166,7 @@ body {
       
     $sql2="select * from login where login.username='$username'";
     $sql=mysqli_query($link,$sql2);
-    while ($row1 = mysqli_fetch_array($sql)){
+    if ($row1 = mysqli_fetch_array($sql)){
       ?>
 
 
